@@ -7,23 +7,27 @@ import netlify from "@netlify/vite-plugin-tanstack-start";
 
 export default defineConfig({
   base: "/",
+
   server: {
     allowedHosts: [
-      "continuously-vinegarish-catalina.ngrok-free.dev"
-    ]
+      "continuously-vinegarish-catalina.ngrok-free.dev",
+    ],
   },
+
   plugins: [
     tsconfigPaths(),
+
     tanstackStart({
-      server: { entry: "server" },
+      server: {
+        entry: "server",
+      },
     }),
+
     react(),
     tailwindcss(),
     netlify(),
   ],
-  build: {
-    outDir: "dist", // 👈 Força o compilador do cliente a salvar na pasta dist na raiz
-  },
+
   resolve: {
     alias: {
       "@": "/src",
