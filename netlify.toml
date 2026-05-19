@@ -1,32 +1,23 @@
 [build]
   command = "bun run build"
+  publish = ".netlify/dist"
 
-# 1. Abre exceção direta para os arquivos estáticos de compilação
-[[redirects]]
-  from = "/assets/*"
-  to = "/assets/:splat"
-  status = 200
-
-# 2. Garante o Favicon e imagens da raiz passem direto
-[[redirects]]
-  from = "/favicon.ico"
-  to = "/favicon.ico"
-  status = 200
-
-# 3. Recursos internos do Netlify
 [[redirects]]
   from = "/_netlify/*"
   to = "/_netlify/:splat"
   status = 200
 
-# 4. APIs e Server Functions
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/server"
   status = 200
   force = true
 
-# 5. Roteamento Universal (SSR) - Só pega o que não for arquivo físico acima
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/server"
