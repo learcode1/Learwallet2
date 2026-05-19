@@ -6,6 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import netlify from "@netlify/vite-plugin-tanstack-start";
 
 export default defineConfig({
+  base: "/", // 👈 Garante caminhos limpos como /assets/... em produção
   server: {
     allowedHosts: [
       "continuously-vinegarish-catalina.ngrok-free.dev"
