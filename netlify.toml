@@ -1,15 +1,6 @@
 [build]
   command = "pnpm run build"
-  publish = "dist/client"
-
-[build.environment]
-  NODE_VERSION = "20"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/__tanstack-start"
-  status = 200
-  force = true
+  publish = ".output/public"
 
 [[redirects]]
   from = "/*"
