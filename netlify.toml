@@ -1,6 +1,6 @@
 [build]
   command = "bun run build"
-  publish = ".netlify/dist"
+  publish = "dist"
 
 [[redirects]]
   from = "/_netlify/*"

@@ -6,7 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import netlify from "@netlify/vite-plugin-tanstack-start";
 
 export default defineConfig({
-  base: "/", // 👈 Garante caminhos limpos como /assets/... em produção
+  base: "/",
   server: {
     allowedHosts: [
       "continuously-vinegarish-catalina.ngrok-free.dev"
@@ -21,6 +21,9 @@ export default defineConfig({
     tailwindcss(),
     netlify(),
   ],
+  build: {
+    outDir: "dist", // 👈 Força o compilador do cliente a salvar na pasta dist na raiz
+  },
   resolve: {
     alias: {
       "@": "/src",
