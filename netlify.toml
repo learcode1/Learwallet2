@@ -1,6 +1,12 @@
 [build]
   command = "pnpm run build"
-  publish = ".output/public"
+  publish = "dist/client"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/__tanstack-start"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
