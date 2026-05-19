@@ -1,10 +1,13 @@
 @import "tailwindcss" source(none);
 @source "../src";
-@import "tw-animate-css";
+
+/* Se o tw-animate-css for um arquivo CSS instalado via npm, mude o @import para buscar direto de node_modules ou use a diretiva @utility legada */
+@import "../node_modules/tw-animate-css/dist/tw-animate.css" layer(utilities);
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* ... todo o seu resto do código do @theme, :root e @layer continua exatamente igual daqui para baixo ... */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
