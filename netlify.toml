@@ -10,5 +10,5 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/__tanstack-start"
   status = 200
