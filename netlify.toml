@@ -1,6 +1,5 @@
 [build]
   command = "bun run build"
-  publish = ".output/public"
 
 [[redirects]]
   from = "/_netlify/*"
