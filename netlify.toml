@@ -1,6 +1,6 @@
 [build]
   command = "bun run build"
-  publish = ".netlify/images" # O plugin usa essa árvore ou a pasta padrão de distribuição do TanStack
+  publish = ".output/public"
 
 [[redirects]]
   from = "/_netlify/*"
